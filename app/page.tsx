@@ -1,8 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 export default function Home() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <main className="min-h-screen bg-[#0a0a0f] text-white overflow-hidden">
 
@@ -22,24 +25,35 @@ export default function Home() {
 
 </div>
 
-       
-        <div className="flex flex-wrap justify-center md:justify-end items-center gap-3 md:gap-6 text-sm text-gray-300"></div>
+    <div className="flex items-center justify-between w-full md:w-auto text-sm text-gray-300">
 
-  <a href="#features" className="hover:text-white transition whitespace-nowrap">
-    Features
-  </a>
-
-  <a href="#how" className="hover:text-white transition whitespace-nowrap">
-    How it works
-  </a>
-
-  <Link
-    href="/account"
-    className="bg-indigo-600 px-4 py-2 md:px-5 rounded-lg hover:bg-indigo-700 transition animate-wiggle whitespace-nowrap"
+  {/* MOBILE MENU BUTTON (=) */}
+  <button
+    className="md:hidden text-2xl font-bold px-3 py-1 rounded-lg bg-white/5 border border-white/10"
+    onClick={() => setMenuOpen(!menuOpen)}
   >
-    Get Started
-  </Link>
+    =
+  </button>
 
+  {/* DESKTOP MENU */}
+  <div className="hidden md:flex gap-6 items-center">
+
+    <a href="#features" className="hover:text-white transition">
+      Features
+    </a>
+
+    <a href="#how" className="hover:text-white transition">
+      How it works
+    </a>
+
+    <Link
+      href="/account"
+      className="bg-indigo-600 px-5 py-2 rounded-lg hover:bg-indigo-700 transition animate-wiggle"
+    >
+      Get Started
+    </Link>
+
+  </div>
 </div>
       </nav>
 
