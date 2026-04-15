@@ -83,8 +83,8 @@ export default function Home() {
             desc: "Safe for testing without real financial risks.",
           },
           {
-            title: "🌍 Nextrade Ready",
-            desc: "Works perfectly inside your Nextrade ecosystem.",
+            title: "🌍 Mobile Ready",
+            desc: "Works perfectly inside your mobile wallet ecosystem.",
           },
         ].map((item, i) => (
           <div

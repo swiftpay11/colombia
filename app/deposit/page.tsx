@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 export default function DepositPage() {
   const [selectedPlan, setSelectedPlan] = useState<any>(null);
@@ -17,7 +18,7 @@ export default function DepositPage() {
  const accountData = {
   bank: {
     type: "bank",
-    name: "Nextrade Bank USA",
+    name:  "ApexGenerate Bank",
     accountNumber:
       "22" + Math.floor(1000000000 + Math.random() * 9000000000),
     routing:
@@ -309,12 +310,13 @@ export default function DepositPage() {
 
             </div>
 
+              <Link href="/account">
             <button
-              onClick={() => setShowModal(false)}
               className="mt-6 w-full bg-green-500 hover:bg-green-600 p-3 rounded-lg font-semibold"
             >
               Close
             </button>
+            </Link>
 
           </div>
         </div>
