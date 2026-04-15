@@ -22,17 +22,24 @@ export default function Home() {
 
 </div>
 
-        <div className="flex gap-6 text-sm text-gray-300 items-center">
-          <a href="#features" className="hover:text-white transition">Features</a>
-          <a href="#how" className="hover:text-white transition">How it works</a>
+       <div className="flex items-center gap-4 md:gap-6 text-sm text-gray-300">
 
-          <Link
-            href="/account"
-            className="bg-indigo-600 px-5 py-2 rounded-lg hover:bg-indigo-700 transition animate-wiggle"
-          >
-            Get Started
-          </Link>
-        </div>
+  <a href="#features" className="hover:text-white transition whitespace-nowrap">
+    Features
+  </a>
+
+  <a href="#how" className="hover:text-white transition whitespace-nowrap">
+    How it works
+  </a>
+
+  <Link
+    href="/account"
+    className="bg-indigo-600 px-4 py-2 md:px-5 rounded-lg hover:bg-indigo-700 transition animate-wiggle whitespace-nowrap"
+  >
+    Get Started
+  </Link>
+
+</div>
       </nav>
 
       {/* HERO */}
