@@ -79,7 +79,7 @@ export default function Home() {
 
         setStep("done");
       }
-    }, 700);
+    }, 1000);
   };
 
   // -------------------------
