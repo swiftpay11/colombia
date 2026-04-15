@@ -57,6 +57,36 @@ export default function Home() {
 </div>
       </nav>
 
+      {menuOpen && (
+  <div className="md:hidden mt-4 flex flex-col gap-3 text-gray-300 bg-white/5 border border-white/10 rounded-xl p-4 backdrop-blur-xl">
+
+    <a
+      href="#features"
+      className="hover:text-white transition"
+      onClick={() => setMenuOpen(false)}
+    >
+      Features
+    </a>
+
+    <a
+      href="#how"
+      className="hover:text-white transition"
+      onClick={() => setMenuOpen(false)}
+    >
+      How it works
+    </a>
+
+    <Link
+      href="/account"
+      className="bg-indigo-600 px-4 py-2 rounded-lg text-center hover:bg-indigo-700 transition"
+      onClick={() => setMenuOpen(false)}
+    >
+      Get Started
+    </Link>
+
+  </div>
+)}
+
       {/* HERO */}
       <section className="relative h-[90vh] flex items-center justify-center text-center px-6">
 
