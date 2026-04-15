@@ -47,10 +47,10 @@ export default function Home() {
     setStep("verifying");
     setProgress(0);
 
-    // FAKE AI VERIFICATION STEP (3 seconds)
+    // FAKE AI VERIFICATION STEP (6 seconds)
     setTimeout(() => {
       setStep("generating");
-    }, 3000);
+    }, 6000);
 
     // PROGRESS BAR (10 seconds total)
     let start = 0;
@@ -79,7 +79,7 @@ export default function Home() {
 
         setStep("done");
       }
-    }, 100);
+    }, 700);
   };
 
   // -------------------------
@@ -207,7 +207,7 @@ export default function Home() {
     {step === "verifying" && (
       <div className="mt-6 text-center z-10">
         <p className="text-yellow-400 text-lg">
-          🧠 AI Verification in progress...
+          🧠 Verification in progress...
         </p>
         <p className="text-gray-400">
           Validating identity, compliance & risk profile
