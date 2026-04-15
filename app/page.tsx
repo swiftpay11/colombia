@@ -24,16 +24,15 @@ export default function Home() {
   </h1>
 
 </div>
-
-    <div className="flex items-center justify-between w-full md:w-auto text-sm text-gray-300">
+<div className="flex items-center justify-between w-full md:w-auto text-sm text-gray-300">
 
   {/* MOBILE MENU BUTTON (=) */}
-  <button
-    className="md:hidden text-2xl font-bold px-3 py-1 rounded-lg bg-white/5 border border-white/10"
-    onClick={() => setMenuOpen(!menuOpen)}
-  >
-    =
-  </button>
+ <button
+  className="md:hidden text-2xl font-bold px-3 py-1 ml-2 rounded-lg bg-white/5 border border-white/10"
+  onClick={() => setMenuOpen(!menuOpen)}
+>
+  =
+</button>
 
   {/* DESKTOP MENU */}
   <div className="hidden md:flex gap-6 items-center">
