@@ -64,7 +64,7 @@ export default function Home() {
         if (form.type === "bank") {
           setGenerated({
             type: "bank",
-            bank: "Nextrade Bank USA",
+            bank: "ApexGenerate Bank",
             accountNumber: generateAccountNumber(),
             routing: generateRouting(),
           });
