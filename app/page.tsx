@@ -22,7 +22,8 @@ export default function Home() {
 
 </div>
 
-       <div className="flex items-center gap-4 md:gap-6 text-sm text-gray-300">
+       
+        <div className="flex flex-wrap justify-center md:justify-end items-center gap-3 md:gap-6 text-sm text-gray-300"></div>
 
   <a href="#features" className="hover:text-white transition whitespace-nowrap">
     Features
