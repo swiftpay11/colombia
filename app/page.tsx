@@ -1,65 +1,152 @@
-import Image from "next/image";
+"use client";
+
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <main className="min-h-screen bg-[#0a0a0f] text-white overflow-hidden">
+
+      {/* NAVBAR */}
+      <nav className="flex justify-between items-center px-6 py-4 border-b border-white/10 backdrop-blur-md bg-black/30 sticky top-0 z-50">
+       <div className="flex items-center gap-2">
+  
+  {/* ICON */}
+ <div className="w-8 h-8 flex items-center justify-center rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 shadow-lg shadow-indigo-500/40 logo-glow">
+    <span className="text-white font-bold text-sm">A</span>
+  </div>
+
+  {/* LOGO TEXT */}
+  <h1 className="text-xl font-bold tracking-wide bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+    ApexGenerate
+  </h1>
+
+</div>
+
+        <div className="flex gap-6 text-sm text-gray-300 items-center">
+          <a href="#features" className="hover:text-white transition">Features</a>
+          <a href="#how" className="hover:text-white transition">How it works</a>
+
+          <Link
+            href="/account"
+            className="bg-indigo-600 px-5 py-2 rounded-lg hover:bg-indigo-700 transition animate-wiggle"
+          >
+            Get Started
+          </Link>
+        </div>
+      </nav>
+
+      {/* HERO */}
+      <section className="relative h-[90vh] flex items-center justify-center text-center px-6">
+
+        {/* BACKGROUND IMAGE */}
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage:
+              "url('/bg.jpg')" // 🔥 PUT YOUR IMAGE IN /public/bg.jpg
+          }}
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+
+        {/* DARK OVERLAY */}
+        <div className="absolute inset-0 bg-black/70 backdrop-blur-[2px]" />
+
+        {/* CONTENT */}
+        <div className="relative z-10 max-w-3xl">
+          <h2 className="text-5xl md:text-6xl font-bold leading-tight mb-6">
+            Generate Virtual US Accounts <br />
+            & Crypto Wallets Instantly
+          </h2>
+
+          <p className="text-gray-300 mb-8 text-lg">
+            ApexGenerate lets you create realistic virtual accounts for demos,
+            testing, and seamless Nextrade integration.
           </p>
+
+          <Link href="/account">
+            <button className="bg-indigo-600 hover:bg-indigo-700 px-10 py-4 rounded-xl text-lg font-semibold transition animate-wiggle shadow-lg shadow-indigo-500/30">
+              Get Started
+            </button>
+          </Link>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+      </section>
+
+      {/* FEATURES */}
+      <section id="features" className="px-6 py-20 max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+        
+        {[
+          {
+            title: "⚡ Instant Generation",
+            desc: "Generate virtual accounts and wallets in seconds.",
+          },
+          {
+            title: "🔒 Secure Simulation",
+            desc: "Safe for testing without real financial risks.",
+          },
+          {
+            title: "🌍 Nextrade Ready",
+            desc: "Works perfectly inside your Nextrade ecosystem.",
+          },
+        ].map((item, i) => (
+          <div
+            key={i}
+            className="bg-white/5 p-6 rounded-2xl border border-white/10 hover:border-indigo-500 transition hover:scale-105"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
+            <p className="text-gray-400 text-sm">{item.desc}</p>
+          </div>
+        ))}
+
+      </section>
+
+      {/* HOW IT WORKS */}
+      <section id="how" className="px-6 py-20 bg-gradient-to-b from-white/5 to-transparent">
+        <div className="max-w-5xl mx-auto text-center">
+          
+          <h2 className="text-3xl font-bold mb-12">How It Works</h2>
+
+          <div className="grid md:grid-cols-3 gap-10 text-left">
+            
+            {[
+              {
+                step: "1. Enter Details",
+                desc: "Provide your basic info and existing account.",
+              },
+              {
+                step: "2. Generate",
+                desc: "Instantly receive a virtual account or wallet.",
+              },
+              {
+                step: "3. Unlock",
+                desc: "Unlock full details and start using it.",
+              },
+            ].map((item, i) => (
+              <div key={i}>
+                <h4 className="font-semibold mb-2 text-indigo-400">{item.step}</h4>
+                <p className="text-gray-400 text-sm">{item.desc}</p>
+              </div>
+            ))}
+
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* CTA */}
+      <section className="text-center px-6 py-20">
+        <h2 className="text-3xl font-bold mb-6">
+          Ready to generate?
+        </h2>
+
+        <Link href="/account">
+          <button className="bg-green-500 hover:bg-green-600 px-10 py-4 rounded-xl text-lg font-semibold animate-wiggle shadow-lg shadow-green-500/30">
+            Start Now
+          </button>
+        </Link>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="border-t border-white/10 text-center text-gray-500 text-sm py-6">
+        © {new Date().getFullYear()} ApexGenerate. All rights reserved.
+      </footer>
+    </main>
   );
 }
