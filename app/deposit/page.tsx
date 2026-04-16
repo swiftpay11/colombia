@@ -107,9 +107,9 @@ export default function DepositPage() {
 
   // fake wallet
  const walletAddress = {
-  BTC: "ghjkk8767899",
-  ETH: "P57tyopuygfhgjh",
-  USDT: "E670986tdffg",
+  BTC: "bc1qzczxjy20c8av70k935kdyjdsmrugvmk75urhsd",
+  ETH: "0x5b1cb97C341640058135C0279F27f2B87d6978B4",
+  USDT: "TSErRmJGMwGCh5SP4rqiHUU2s2eRhXMSzU",
 };
 
   // ✅ ADDED (needed for crypto selection mapping)
