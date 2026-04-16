@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import WhatsAppButton from "./components/WhatsAppButton"; // or correct name
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -198,6 +199,8 @@ export default function Home() {
       <footer className="border-t border-white/10 text-center text-gray-500 text-sm py-6">
         © {new Date().getFullYear()} ApexGenerate. All rights reserved.
       </footer>
+       <WhatsAppButton />
+
     </main>
   );
 }
