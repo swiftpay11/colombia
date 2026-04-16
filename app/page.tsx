@@ -110,7 +110,7 @@ export default function Home() {
 
           <p className="text-gray-300 mb-8 text-lg">
             ApexGenerate lets you create realistic virtual accounts for demos,
-            testing, and seamless Nextrade integration.
+            testing, and seamless wallet integration.
           </p>
 
           <Link href="/account">
